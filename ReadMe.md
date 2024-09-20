@@ -4,22 +4,21 @@ Bienvenue dans le **User Management System**! Ce projet fournit une interface gr
 
 ## Table des matières
 
-- [Features](#features)
+- [Fonctionnalités](#fonctionnalités)
 - [Technologies](#technologies)
-- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+- [Test](#test)
+- [Contribution](#contribution)
+- [Licence](#licence)
 
 ---
 
 ## Fonctionnalités
 
 1. **Authentification utilisateur**: 
-   - Users can log in with a username and password.
-   - Admins are granted access to the full user management panel.
+   - Les utilisateurs peuvent se connecter avec un nom d'utilisateur et un mot de passe.
+   - Les administrateurs sont autorisés à accéder au panneau d'administration complet.
 
 2. **Panneau d'administration**: 
    - Les administrateurs peuvent:
