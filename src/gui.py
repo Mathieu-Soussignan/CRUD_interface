@@ -38,9 +38,9 @@ class UserManagementApp:
             if self.current_user['is_admin']:
                 self.show_admin_panel()
             else:
-                messagebox.showinfo("Success", "Login successful! You are a regular user.")
+                messagebox.showinfo("Succès", "Connexion réussie! Vous êtes un utilisateur régulier.")
         else:
-            messagebox.showerror("Error", "Invalid username or password")
+            messagebox.showerror("Erreur", "Nom d'utilisateur ou mot de passe invalide")
 
     def show_admin_panel(self):
         self.clear_screen()
@@ -71,25 +71,25 @@ class UserManagementApp:
         self.list_button.grid(row=5, column=0, columnspan=2)
 
         # Modifier un utilisateur
-        self.modify_username_label = tk.Label(self.root, text="User to Modify/Delete")
+        self.modify_username_label = tk.Label(self.root, text="Utilisateur à modifier/supprimer")
         self.modify_username_label.grid(row=6, column=0)
         self.modify_username_entry = tk.Entry(self.root)
         self.modify_username_entry.grid(row=6, column=1)
 
-        self.new_email_label = tk.Label(self.root, text="New Email")
+        self.new_email_label = tk.Label(self.root, text="Nouveau Email")
         self.new_email_label.grid(row=7, column=0)
         self.new_email_entry = tk.Entry(self.root)
         self.new_email_entry.grid(row=7, column=1)
 
-        self.new_password_label = tk.Label(self.root, text="New Password")
+        self.new_password_label = tk.Label(self.root, text="Nouveau mot de passe")
         self.new_password_label.grid(row=8, column=0)
         self.new_password_entry = tk.Entry(self.root, show="*")
         self.new_password_entry.grid(row=8, column=1)
 
-        self.modify_button = tk.Button(self.root, text="Modify User", command=self.modify_user)
+        self.modify_button = tk.Button(self.root, text="Modifier l'utilisateur", command=self.modify_user)
         self.modify_button.grid(row=9, column=0, columnspan=2)
 
-        self.delete_button = tk.Button(self.root, text="Delete User", command=self.delete_user)
+        self.delete_button = tk.Button(self.root, text="Supprimer l'utilisateur", command=self.delete_user)
         self.delete_button.grid(row=10, column=0, columnspan=2)
 
     def reset_fields(self):
@@ -108,15 +108,15 @@ class UserManagementApp:
 
         if username and email and password:
             self.system.create_user(username, email, password, is_admin=False)
-            messagebox.showinfo("Success", "User created successfully!")
+            messagebox.showinfo("Succès", "Utilisateur créé avec succès!")
             self.reset_fields()  # Réinitialiser les champs après la création
         else:
-            messagebox.showwarning("Input Error", "All fields must be filled")
+            messagebox.showwarning("Erreur", "Tous les champs doivent être remplis")
 
     def list_users(self):
         users = self.system.list_users()
         user_list = "\n".join([f"{user['username']} - {user['email']} - Admin: {user['is_admin']}" for _, user in users.iterrows()])
-        messagebox.showinfo("User List", user_list)
+        messagebox.showinfo("Liste des utilisateurs", user_list)
 
     def modify_user(self):
         username = self.modify_username_entry.get()
@@ -125,20 +125,20 @@ class UserManagementApp:
 
         if username and (new_email or new_password):
             self.system.update_user(username, new_email=new_email, new_password=new_password)
-            messagebox.showinfo("Success", "User information updated successfully!")
+            messagebox.showinfo("Succès", "Informations de l'utilisateur modifiées avec succès!")
             self.reset_fields()  # Réinitialiser les champs après modification
         else:
-            messagebox.showwarning("Input Error", "You must provide a username and at least one new value")
+            messagebox.showwarning("Erreur", "Vous devez fournir un nom d'utilisateur et au moins une nouvelle valeur")
 
     def delete_user(self):
         username = self.modify_username_entry.get()
 
         if username:
             self.system.delete_user(username)
-            messagebox.showinfo("Success", "User deleted successfully!")
+            messagebox.showinfo("Succès", "Utilisateur supprimé avec succès!")
             self.reset_fields()  # Réinitialiser les champs après suppression
         else:
-            messagebox.showwarning("Input Error", "You must provide a username to delete")
+            messagebox.showwarning("Erreur", "Vous devez fournir un nom d'utilisateur à supprimer")
 
     def clear_screen(self):
         for widget in self.root.winfo_children():
