@@ -1,0 +1,7 @@
+username,email,password_hash,is_admin
+Mathieu,mathieu@admin.com,$2b$12$81vo2IS4nu7BQ.bWUpIyCeg9X/B3rNo.Effi3ASRZFtBLcAKc7S46,True
+toto,toto@,$2b$12$Pfixq0yjkJnXX8cIDZUrueOYwebArTLnCArjx7smI.lB2BjNyPUDG,False
+tata,tata500@,$2b$12$dSnup0dMnsVJhoyDpeA/5eSa1IOUtRdi0R/6vDvxQM7rKsDHhFRBm,False
+titi,titi200@,$2b$12$Jd8ODiCB6rTU9zcdER6VkuPYOGaU0fdCWMpXJUPY7VJdbw24RVlJC,False
+Patrick,mathieu@simplon.com,$2b$12$ltfZAn3YsMeeok25/VHDK.cluyC0f06EwuFZWa2DkahXr0UKTgui.,False
+Loan,lolo@,$2b$12$nvzxoq9CnVRHPDTb2syZS.D0PCx.rDSCnZWE/hQWVaK9xE/NwTCRW,False
