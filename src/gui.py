@@ -15,17 +15,17 @@ class UserManagementApp:
     def show_login_screen(self):
         self.clear_screen()
 
-        self.username_label = tk.Label(self.root, text="Username")
+        self.username_label = tk.Label(self.root, text="Nom d'utilisateur")
         self.username_label.grid(row=0, column=0)
         self.username_entry = tk.Entry(self.root)
         self.username_entry.grid(row=0, column=1)
 
-        self.password_label = tk.Label(self.root, text="Password")
+        self.password_label = tk.Label(self.root, text="Mot de passe")
         self.password_label.grid(row=1, column=0)
         self.password_entry = tk.Entry(self.root, show="*")
         self.password_entry.grid(row=1, column=1)
 
-        self.login_button = tk.Button(self.root, text="Login", command=self.login)
+        self.login_button = tk.Button(self.root, text="Connexion", command=self.login)
         self.login_button.grid(row=2, column=0, columnspan=2)
 
     def login(self):
@@ -45,11 +45,11 @@ class UserManagementApp:
     def show_admin_panel(self):
         self.clear_screen()
 
-        self.welcome_label = tk.Label(self.root, text=f"Welcome, {self.current_user['username']} (Admin)")
+        self.welcome_label = tk.Label(self.root, text=f"Bienvenue, {self.current_user['username']} (Admin)")
         self.welcome_label.grid(row=0, column=0, columnspan=2)
 
         # Créer un utilisateur
-        self.username_label = tk.Label(self.root, text="Username")
+        self.username_label = tk.Label(self.root, text="Nom d'utilisateur")
         self.username_label.grid(row=1, column=0)
         self.username_entry = tk.Entry(self.root)
         self.username_entry.grid(row=1, column=1)
@@ -59,15 +59,15 @@ class UserManagementApp:
         self.email_entry = tk.Entry(self.root)
         self.email_entry.grid(row=2, column=1)
 
-        self.password_label = tk.Label(self.root, text="Password")
+        self.password_label = tk.Label(self.root, text="Mot de passe")
         self.password_label.grid(row=3, column=0)
         self.password_entry = tk.Entry(self.root, show="*")
         self.password_entry.grid(row=3, column=1)
 
-        self.create_button = tk.Button(self.root, text="Create User", command=self.create_user)
+        self.create_button = tk.Button(self.root, text="Créer un utilisateur", command=self.create_user)
         self.create_button.grid(row=4, column=0, columnspan=2)
 
-        self.list_button = tk.Button(self.root, text="List Users", command=self.list_users)
+        self.list_button = tk.Button(self.root, text="Liste des utilisateurs", command=self.list_users)
         self.list_button.grid(row=5, column=0, columnspan=2)
 
         # Modifier un utilisateur
