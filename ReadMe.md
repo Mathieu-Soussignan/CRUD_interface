@@ -2,7 +2,7 @@
 
 Bienvenue dans le **User Management System**! Ce projet fournit une interface graphique utilisateur (GUI) construite à l'aide de **Tkinter** qui permet aux utilisateurs de se connecter, et, si ils sont administrateurs, de gérer les utilisateurs (créer, modifier, supprimer) de manière simple et intuitive.
 
-## Table of Contents
+## Table des matières
 
 - [Features](#features)
 - [Technologies](#technologies)
